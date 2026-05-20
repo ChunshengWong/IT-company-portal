@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import Hero from '../components/Hero';
 import CaseCard from '../components/CaseCard';
 import { Shield, Cloud, Building2, ArrowRight } from 'lucide-react';
@@ -10,68 +11,69 @@ interface CaseItem {
 }
 
 export default function HomePage() {
+  const { t } = useTranslation();
 
   const coreServices = [
     {
       icon: Cloud,
-      title: '基础架构服务',
-      description: 'SmartX 超融合解决方案，为企业提供高效、稳定的基础架构支撑',
+      title: t('home.infrastructure'),
+      description: t('home.infrastructureDesc'),
       link: '/infrastructure',
     },
     {
       icon: Shield,
-      title: '安全工作空间',
-      description: 'RBI 远程浏览器隔离 + 数据管理平台，保障企业数据安全',
+      title: t('home.security'),
+      description: t('home.securityDesc'),
       link: '/security',
     },
     {
       icon: Building2,
-      title: '行业产品',
-      description: '证券基金 IT 治理数字化产品，助力金融行业数字化转型',
+      title: t('home.products'),
+      description: t('home.productsDesc'),
       link: '/products',
     },
   ];
 
   const advantages = [
-    { title: '行业深耕', description: '专注金融行业多年，深刻理解行业需求' },
-    { title: '技术创新', description: '持续投入研发，保持技术领先' },
-    { title: '专业服务', description: '专业的技术团队，提供全程支持' },
-    { title: '安全合规', description: '符合行业监管要求，保障数据安全' },
+    { title: t('home.industryExpertise'), description: t('home.industryExpertiseDesc') },
+    { title: t('home.techInnovation'), description: t('home.techInnovationDesc') },
+    { title: t('home.professionalService'), description: t('home.professionalServiceDesc') },
+    { title: t('home.securityCompliance'), description: t('home.securityComplianceDesc') },
   ];
 
   const latestNews = [
     {
-      title: '公司成功签约某头部券商',
+      title: t('home.news1'),
       date: '2024-01-15',
-      category: '公司新闻',
+      category: t('home.companyNews'),
     },
     {
-      title: 'RBI产品获得国家级安全认证',
+      title: t('home.news2'),
       date: '2024-01-10',
-      category: '产品动态',
+      category: t('home.productNews'),
     },
     {
-      title: '2024金融科技发展趋势报告发布',
+      title: t('home.news3'),
       date: '2024-01-05',
-      category: '行业资讯',
+      category: t('home.industryNews'),
     },
   ];
 
   const latestCases = [
     {
-      title: '某头部券商基础架构升级项目',
-      description: '采用SmartX超融合方案，提升系统性能300%',
-      tags: ['证券', '基础架构'],
+      title: t('home.case1'),
+      description: t('home.case1Desc'),
+      tags: [t('casesPage.securities'), t('casesPage.infrastructure')],
     },
     {
-      title: '某基金公司安全工作空间建设',
-      description: 'RBI解决方案保障远程办公安全',
-      tags: ['基金', '安全'],
+      title: t('home.case2'),
+      description: t('home.case2Desc'),
+      tags: [t('casesPage.fund'), t('casesPage.security')],
     },
     {
-      title: '某券商IT治理数字化转型',
-      description: '全面提升IT运维效率和管理水平',
-      tags: ['证券', 'IT治理'],
+      title: t('home.case3'),
+      description: t('home.case3Desc'),
+      tags: [t('casesPage.securities'), t('casesPage.itGovernance')],
     },
   ];
 
@@ -83,10 +85,10 @@ export default function HomePage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold text-text-primary mb-4">
-              三大核心业务
+              {t('home.coreServices')}
             </h2>
             <p className="text-lg text-text-secondary">
-              专注金融行业，提供全面的技术解决方案
+              {t('home.coreServicesDesc')}
             </p>
           </div>
 
@@ -107,7 +109,7 @@ export default function HomePage() {
                   {service.description}
                 </p>
                 <div className="flex items-center gap-2 text-secondary font-medium">
-                  了解更多
+                  {t('home.startConsultation')}
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </div>
               </Link>
@@ -120,10 +122,10 @@ export default function HomePage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold text-text-primary mb-4">
-              为什么选择我们
+              {t('home.whyChoose')}
             </h2>
             <p className="text-lg text-text-secondary">
-              专业、可信赖、创新
+              {t('home.whyChooseDesc')}
             </p>
           </div>
 
@@ -150,17 +152,17 @@ export default function HomePage() {
           <div className="flex justify-between items-end mb-12">
             <div>
               <h2 className="text-3xl lg:text-4xl font-bold text-text-primary mb-4">
-                最新动态
+                {t('home.latestNews')}
               </h2>
               <p className="text-lg text-text-secondary">
-                了解我们的最新消息
+                {t('home.latestNewsDesc')}
               </p>
             </div>
             <Link
               to="/news"
               className="hidden lg:flex items-center gap-2 text-secondary font-medium hover:gap-3 transition-all"
             >
-              查看全部
+              {t('home.viewAll')}
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
@@ -192,7 +194,7 @@ export default function HomePage() {
               to="/news"
               className="inline-flex items-center gap-2 text-secondary font-medium hover:gap-3 transition-all"
             >
-              查看全部
+              {t('home.viewAll')}
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
@@ -204,17 +206,17 @@ export default function HomePage() {
           <div className="flex justify-between items-end mb-12">
             <div>
               <h2 className="text-3xl lg:text-4xl font-bold text-text-primary mb-4">
-                成功案例
+                {t('home.successCases')}
               </h2>
               <p className="text-lg text-text-secondary">
-                真实案例，卓越成果
+                {t('home.successCasesDesc')}
               </p>
             </div>
             <Link
               to="/cases"
               className="hidden lg:flex items-center gap-2 text-secondary font-medium hover:gap-3 transition-all"
             >
-              查看全部
+              {t('home.viewAll')}
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
@@ -235,7 +237,7 @@ export default function HomePage() {
               to="/cases"
               className="inline-flex items-center gap-2 text-secondary font-medium hover:gap-3 transition-all"
             >
-              查看全部
+              {t('home.viewAll')}
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
@@ -245,16 +247,16 @@ export default function HomePage() {
       <section className="py-16 lg:py-24 bg-gradient-to-r from-secondary to-primary">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-            准备好开始了吗？
+            {t('home.ready')}
           </h2>
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-            立即联系我们，获取专业的解决方案咨询
+            {t('home.readyDesc')}
           </p>
           <Link
             to="/contact"
             className="inline-flex items-center gap-2 px-8 py-4 bg-white text-primary font-semibold rounded-lg hover:bg-gray-100 transition-all hover:scale-105 shadow-lg"
           >
-            开始咨询
+            {t('home.startConsultation')}
             <ArrowRight className="w-5 h-5" />
           </Link>
         </div>

@@ -1,55 +1,57 @@
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { ArrowRight, CheckCircle, Server, Shield, Zap, Users } from 'lucide-react';
 
 export default function InfrastructurePage() {
+  const { t } = useTranslation();
 
   const features = [
     {
       icon: Server,
-      title: '超融合架构',
-      description: '整合计算、存储、网络资源，简化IT基础设施',
+      title: t('infrastructurePage.hyperConverged'),
+      description: t('infrastructurePage.hyperConvergedDesc'),
     },
     {
       icon: Shield,
-      title: '高可用保障',
-      description: '多节点冗余设计，保障业务连续性',
+      title: t('infrastructurePage.highAvailability'),
+      description: t('infrastructurePage.highAvailabilityDesc'),
     },
     {
       icon: Zap,
-      title: '性能优化',
-      description: '分布式存储技术，提供卓越性能',
+      title: t('infrastructurePage.performance'),
+      description: t('infrastructurePage.performanceDesc'),
     },
     {
       icon: Users,
-      title: '简易运维',
-      description: '统一管理平台，降低运维复杂度',
+      title: t('infrastructurePage.easyOperation'),
+      description: t('infrastructurePage.easyOperationDesc'),
     },
   ];
 
   const scenarios = [
     {
-      title: '核心交易系统',
-      description: '为券商核心交易系统提供高性能、高可用的基础设施支撑',
+      title: t('infrastructurePage.tradingSystem'),
+      description: t('infrastructurePage.tradingSystemDesc'),
     },
     {
-      title: '数据中心建设',
-      description: '帮助基金公司构建现代化数据中心',
+      title: t('infrastructurePage.dataCenter'),
+      description: t('infrastructurePage.dataCenterDesc'),
     },
     {
-      title: '灾备中心',
-      description: '实现同城灾备，保障业务安全',
+      title: t('infrastructurePage.disasterRecovery'),
+      description: t('infrastructurePage.disasterRecoveryDesc'),
     },
     {
-      title: '开发测试环境',
-      description: '快速交付开发测试环境，提升研发效率',
+      title: t('infrastructurePage.devTest'),
+      description: t('infrastructurePage.devTestDesc'),
     },
   ];
 
   const advantages = [
-    '业界领先的超融合技术',
-    '针对金融行业场景优化',
-    '完善的技术支持和服务',
-    '灵活的扩展能力',
+    t('infrastructurePage.advantage1'),
+    t('infrastructurePage.advantage2'),
+    t('infrastructurePage.advantage3'),
+    t('infrastructurePage.advantage4'),
   ];
 
   return (
@@ -57,10 +59,10 @@ export default function InfrastructurePage() {
       <section className="py-16 lg:py-24 bg-gradient-to-br from-primary via-primary-dark to-secondary">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
           <h1 className="text-4xl lg:text-5xl font-bold mb-6">
-            基础架构服务
+            {t('infrastructurePage.title')}
           </h1>
           <p className="text-xl text-white/90 max-w-2xl mx-auto">
-            SmartX 超融合解决方案，为企业提供高效、稳定的基础架构支撑
+            {t('infrastructurePage.subtitle')}
           </p>
         </div>
       </section>
@@ -69,19 +71,19 @@ export default function InfrastructurePage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-text-primary mb-8 text-center">
-              产品介绍
+              {t('infrastructurePage.productIntro')}
             </h2>
             <p className="text-lg text-text-secondary leading-relaxed mb-6">
-              SmartX 超融合基础架构（HCI）将计算、存储、网络和虚拟化整合到一个统一的系统中，为企业提供简化、高效的IT基础设施解决方案。
+              {t('infrastructurePage.productDesc1')}
             </p>
             <p className="text-lg text-text-secondary leading-relaxed">
-              我们作为SmartX的授权合作伙伴，为证券、基金等金融机构提供从方案咨询、部署实施到运维支持的全流程服务。
+              {t('infrastructurePage.productDesc2')}
             </p>
           </div>
 
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl lg:text-4xl font-bold text-text-primary mb-12 text-center">
-              核心功能
+              {t('infrastructurePage.coreFeatures')}
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {features.map((feature, index) => (
@@ -108,7 +110,7 @@ export default function InfrastructurePage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl lg:text-4xl font-bold text-text-primary mb-12 text-center">
-              应用场景
+              {t('infrastructurePage.applicationScenarios')}
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {scenarios.map((scenario, index) => (
@@ -130,7 +132,7 @@ export default function InfrastructurePage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl lg:text-4xl font-bold text-text-primary mb-12 text-center">
-              我们的优势
+              {t('infrastructurePage.advantages')}
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {advantages.map((advantage, index) => (
@@ -147,16 +149,16 @@ export default function InfrastructurePage() {
       <section className="py-16 lg:py-24 bg-gradient-to-r from-secondary to-primary">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-            准备开始了吗？
+            {t('home.ready')}
           </h2>
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-            立即联系我们，获取专业的SmartX解决方案咨询
+            {t('home.readyDesc')}
           </p>
           <Link
             to="/contact"
             className="inline-flex items-center gap-2 px-8 py-4 bg-white text-primary font-semibold rounded-lg hover:bg-gray-100 transition-all hover:scale-105 shadow-lg"
           >
-            开始咨询
+            {t('home.startConsultation')}
             <ArrowRight className="w-5 h-5" />
           </Link>
         </div>

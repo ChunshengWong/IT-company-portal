@@ -1,63 +1,63 @@
+import { useTranslation } from 'react-i18next';
 import { ArrowRight, FileText, Newspaper, Lightbulb } from 'lucide-react';
 
 export default function NewsPage() {
+  const { t } = useTranslation();
 
   const news = [
     {
-      title: '公司成功签约某头部券商IT治理项目',
+      title: t('newsPage.news1'),
       date: '2024-01-20',
-      category: '公司新闻',
+      category: t('newsPage.companyNews'),
       icon: Newspaper,
-      description: '近日，我们成功签约某头部券商IT治理数字化项目，将为其提供全面的IT治理解决方案...',
+      description: t('newsPage.news1Desc'),
     },
     {
-      title: 'RBI产品获得国家级安全认证',
+      title: t('newsPage.news2'),
       date: '2024-01-15',
-      category: '产品动态',
+      category: t('newsPage.productNews'),
       icon: FileText,
-      description: '我们自主研发的RBI远程浏览器隔离产品成功获得国家级安全认证，标志着产品达到行业领先水平...',
+      description: t('newsPage.news2Desc'),
     },
     {
-      title: '2024金融科技发展趋势报告发布',
+      title: t('newsPage.news3'),
       date: '2024-01-10',
-      category: '行业资讯',
+      category: t('newsPage.industryNews'),
       icon: Lightbulb,
-      description: '近日，我们发布了《2024金融科技发展趋势报告》，深入分析金融行业技术发展方向...',
+      description: t('newsPage.news3Desc'),
     },
     {
-      title: 'SmartX超融合解决方案全面升级',
+      title: t('newsPage.news4'),
       date: '2024-01-05',
-      category: '产品动态',
+      category: t('newsPage.productNews'),
       icon: FileText,
-      description: 'SmartX超融合解决方案完成全面升级，新版本在性能、安全性、易用性等方面均有显著提升...',
+      description: t('newsPage.news4Desc'),
     },
     {
-      title: '公司荣获"年度金融科技服务奖"',
+      title: t('newsPage.news5'),
       date: '2024-01-01',
-      category: '公司新闻',
+      category: t('newsPage.companyNews'),
       icon: Newspaper,
-      description: '在刚刚结束的金融科技年度评选中，我们公司荣获"年度金融科技服务奖"...',
+      description: t('newsPage.news5Desc'),
     },
     {
-      title: '证券公司信息安全建设指南发布',
+      title: t('newsPage.news6'),
       date: '2023-12-28',
-      category: '行业资讯',
+      category: t('newsPage.industryNews'),
       icon: Lightbulb,
-      description: '我们团队结合多年实践经验，发布了《证券公司信息安全建设指南》，为行业提供参考...',
+      description: t('newsPage.news6Desc'),
     },
   ];
 
   const getCategoryIcon = (category: string) => {
-    switch (category) {
-      case '公司新闻':
-        return Newspaper;
-      case '产品动态':
-        return FileText;
-      case '行业资讯':
-        return Lightbulb;
-      default:
-        return FileText;
+    if (category === t('newsPage.companyNews')) {
+      return Newspaper;
+    } else if (category === t('newsPage.productNews')) {
+      return FileText;
+    } else if (category === t('newsPage.industryNews')) {
+      return Lightbulb;
     }
+    return FileText;
   };
 
   return (
@@ -65,10 +65,10 @@ export default function NewsPage() {
       <section className="py-16 lg:py-24 bg-gradient-to-br from-primary via-primary-dark to-secondary">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
           <h1 className="text-4xl lg:text-5xl font-bold mb-6">
-            新闻动态
+            {t('newsPage.title')}
           </h1>
           <p className="text-xl text-white/90 max-w-2xl mx-auto">
-            了解我们的最新消息和行业资讯
+            {t('newsPage.subtitle')}
           </p>
         </div>
       </section>
@@ -103,7 +103,7 @@ export default function NewsPage() {
                         {item.description}
                       </p>
                       <button className="flex items-center gap-2 text-secondary font-medium hover:gap-3 transition-all">
-                        阅读更多
+                        {t('newsPage.readMore')}
                         <ArrowRight className="w-4 h-4" />
                       </button>
                     </div>

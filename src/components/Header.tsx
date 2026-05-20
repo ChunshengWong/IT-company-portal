@@ -1,9 +1,11 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import LanguageSwitcher from './LanguageSwitcher';
 import { Menu, X } from 'lucide-react';
 
 export default function Header() {
+  const { t } = useTranslation();
   const location = useLocation();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -22,14 +24,14 @@ export default function Header() {
   }, [location]);
 
   const navItems = [
-    { path: '/', label: '首页' },
-    { path: '/about', label: '关于我们' },
-    { path: '/infrastructure', label: '基础架构' },
-    { path: '/security', label: '安全工作空间' },
-    { path: '/products', label: '行业产品' },
-    { path: '/cases', label: '案例展示' },
-    { path: '/news', label: '新闻动态' },
-    { path: '/contact', label: '联系我们' },
+    { path: '/', label: t('nav.home') },
+    { path: '/about', label: t('nav.about') },
+    { path: '/infrastructure', label: t('nav.infrastructure') },
+    { path: '/security', label: t('nav.security') },
+    { path: '/products', label: t('nav.products') },
+    { path: '/cases', label: t('nav.cases') },
+    { path: '/news', label: t('nav.news') },
+    { path: '/contact', label: t('nav.contact') },
   ];
 
   return (

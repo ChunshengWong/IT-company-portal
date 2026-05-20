@@ -8,7 +8,7 @@ export default function Footer() {
   const quickLinks = [
     { path: '/', label: t('nav.home') },
     { path: '/about', label: t('nav.about') },
-    { path: '/services', label: t('nav.services') },
+    { path: '/infrastructure', label: t('nav.infrastructure') },
     { path: '/cases', label: t('nav.cases') },
     { path: '/contact', label: t('nav.contact') },
   ];
