@@ -1,0 +1,154 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "cases": "Cases",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Professional IT Services",
+    "subtitle": "Empowering your digital transformation with cutting-edge technology solutions",
+    "cta": "Learn More",
+    "ctaSecondary": "Contact Us"
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "Comprehensive technology solutions to accelerate your business growth",
+    "items": [
+      {
+        "title": "Software Development",
+        "description": "Custom software development tailored to your unique business needs"
+      },
+      {
+        "title": "Cloud Services",
+        "description": "Professional cloud architecture design and migration services"
+      },
+      {
+        "title": "Data Services",
+        "description": "Big data analytics and AI solutions to unlock data value"
+      },
+      {
+        "title": "Operations Support",
+        "description": "7x24 operational support to ensure system stability"
+      }
+    ]
+  },
+  "whyChooseUs": {
+    "title": "Why Choose Us",
+    "subtitle": "Professional, Reliable, Innovative",
+    "items": [
+      {
+        "title": "Expert Team",
+        "description": "Top-tier technical talents from the industry"
+      },
+      {
+        "title": "Rich Experience",
+        "description": "10+ years of industry expertise with 500+ successful projects"
+      },
+      {
+        "title": "Innovation",
+        "description": "Stay at the forefront of technology with continuous innovation"
+      },
+      {
+        "title": "Quality Service",
+        "description": "Customer-centric approach with attentive service"
+      }
+    ]
+  },
+  "stats": {
+    "title": "Results That Speak",
+    "items": [
+      { "value": 500, "label": "Projects Delivered", "suffix": "+" },
+      { "value": 200, "label": "Enterprise Clients", "suffix": "+" },
+      { "value": 50, "label": "Tech Experts", "suffix": "+" },
+      { "value": 98, "label": "Client Satisfaction", "suffix": "%" }
+    ]
+  },
+  "partners": {
+    "title": "Our Partners"
+  },
+  "cases": {
+    "title": "Success Stories",
+    "subtitle": "Real cases, outstanding results",
+    "items": [
+      {
+        "title": "Financial Industry Solutions",
+        "description": "Digital transformation services for a major bank",
+        "tags": ["Finance", "Digital Transformation"]
+      },
+      {
+        "title": "E-commerce Platform",
+        "description": "Building a platform handling millions of orders daily",
+        "tags": ["E-commerce", "High Concurrency"]
+      },
+      {
+        "title": "Smart Manufacturing System",
+        "description": "Helping manufacturers achieve intelligent upgrades",
+        "tags": ["Smart Manufacturing", "IoT"]
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to Get Started?",
+    "subtitle": "Contact us now for professional consultation",
+    "button": "Start Consulting"
+  },
+  "about": {
+    "title": "About FutureTech",
+    "subtitle": "Your Digital Transformation Partner",
+    "description": "FutureTech is a high-tech enterprise specializing in IT services, committed to providing comprehensive technology solutions for our clients. With an experienced professional team, we have deep expertise in software development, cloud computing, and big data.",
+    "mission": "Mission",
+    "missionText": "Help enterprises achieve digital transformation through innovative technology solutions, creating greater value.",
+    "vision": "Vision",
+    "visionText": "Become the most trusted IT service provider for our clients.",
+    "values": "Core Values",
+    "valuesItems": [
+      { "title": "Customer First", "description": "Always customer-oriented" },
+      { "title": "Innovation-Driven", "description": "Continuous innovation leading technology" },
+      { "title": "Win-Win Collaboration", "description": "Grow together with clients and partners" },
+      { "title": "Pursuit of Excellence", "description": "Striving for excellence, building quality products" }
+    ],
+    "team": {
+      "title": "Leadership Team",
+      "subtitle": "Professional, Focused, Dedicated"
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "We look forward to working with you",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone",
+      "company": "Company",
+      "message": "Message",
+      "submit": "Submit Inquiry",
+      "placeholder": {
+        "name": "Please enter your name",
+        "email": "Please enter your email",
+        "phone": "Please enter your phone",
+        "company": "Please enter your company name",
+        "message": "Please enter your inquiry"
+      }
+    },
+    "info": {
+      "title": "Contact Information",
+      "address": "Address",
+      "addressValue": "88 Jianguo Road, Chaoyang District, Beijing",
+      "phone": "Phone",
+      "phoneValue": "400-888-8888",
+      "email": "Email",
+      "emailValue": "contact@example.com",
+      "hours": "Business Hours",
+      "hoursValue": "Monday to Friday, 9:00 AM - 6:00 PM"
+    }
+  },
+  "footer": {
+    "description": "Professional IT service solutions provider, safeguarding your digital transformation journey",
+    "quickLinks": "Quick Links",
+    "contact": "Contact",
+    "follow": "Follow Us",
+    "copyright": "© 2024 FutureTech. All rights reserved."
+  }
+}
