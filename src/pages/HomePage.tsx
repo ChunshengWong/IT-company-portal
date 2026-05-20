@@ -105,21 +105,15 @@ export default function HomePage() {
     <div className="bg-gray-50">
       <section className="py-20 lg:py-28 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-4xl mx-auto">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full mb-6">
-              <span className="w-2 h-2 bg-primary rounded-full animate-pulse"></span>
-              <span className="text-sm font-medium text-primary">
-                {t('home.industryExpertise')}
-              </span>
-            </div>
+          <div className="max-w-4xl mx-auto">
             <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 mb-6 leading-tight">
               {t('hero.title')}
               <span className="block text-secondary mt-2">{t('hero.subtitle')}</span>
             </h1>
-            <p className="text-lg lg:text-xl text-gray-600 mb-10 max-w-2xl mx-auto">
+            <p className="text-lg lg:text-xl text-gray-600 mb-10 max-w-2xl">
               {t('home.coreServicesDesc')}
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4">
               <Link
                 to="/about"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-primary to-primary-dark text-white font-semibold rounded-xl hover:shadow-xl hover:scale-105 transition-all duration-300"
@@ -140,7 +134,7 @@ export default function HomePage() {
 
       <section className="py-16 lg:py-24 bg-gray-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-16">
+          <div className="max-w-3xl mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
               {t('home.coreServices')}
             </h2>
@@ -178,7 +172,7 @@ export default function HomePage() {
 
       <section className="py-16 lg:py-24 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-16">
+          <div className="max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
               {t('home.whyChoose')}
             </h2>
@@ -189,11 +183,11 @@ export default function HomePage() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {advantages.map((item, index) => (
-              <div key={index} className="group text-center p-8 bg-gradient-to-br from-gray-50 to-white rounded-3xl border border-gray-100 hover:border-secondary/30 hover:shadow-xl transition-all duration-300">
-                <div className="w-16 h-16 mx-auto mb-6 bg-gradient-to-br from-secondary/10 to-primary/10 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <item.icon className="w-8 h-8 text-secondary" />
+              <div key={index} className="group p-6 bg-gradient-to-br from-gray-50 to-white rounded-3xl border border-gray-100 hover:border-secondary/30 hover:shadow-xl transition-all duration-300">
+                <div className="w-14 h-14 bg-gradient-to-br from-secondary/10 to-primary/10 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <item.icon className="w-7 h-7 text-secondary" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                <h3 className="text-lg font-bold text-gray-900 mb-2">
                   {item.title}
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed">
