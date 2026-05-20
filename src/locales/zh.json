@@ -1,118 +1,14 @@
 {
-  "nav": {
-    "home": "首页",
-    "about": "关于我们",
-    "services": "服务内容",
-    "cases": "案例中心",
-    "contact": "联系我们"
-  },
   "hero": {
     "title": "专业IT服务",
-    "subtitle": "助力企业数字化转型，打造卓越技术解决方案",
+    "subtitle": "专注金融行业，打造卓越技术解决方案",
     "cta": "了解更多",
     "ctaSecondary": "联系我们"
   },
-  "services": {
-    "title": "我们的服务",
-    "subtitle": "全方位技术解决方案，助您业务腾飞",
-    "items": [
-      {
-        "title": "软件开发",
-        "description": "定制化软件开发服务，满足企业独特业务需求"
-      },
-      {
-        "title": "云服务",
-        "description": "专业的云架构设计与迁移服务，优化您的基础设施"
-      },
-      {
-        "title": "数据服务",
-        "description": "大数据分析与AI解决方案，挖掘数据价值"
-      },
-      {
-        "title": "运维支持",
-        "description": "7x24小时运维保障，确保系统稳定运行"
-      }
-    ]
-  },
-  "whyChooseUs": {
-    "title": "为什么选择我们",
-    "subtitle": "专业、可信赖、创新",
-    "items": [
-      {
-        "title": "专业团队",
-        "description": "汇聚行业顶尖技术人才"
-      },
-      {
-        "title": "丰富经验",
-        "description": "10+年行业深耕，500+成功案例"
-      },
-      {
-        "title": "创新技术",
-        "description": "紧跟技术前沿，持续创新"
-      },
-      {
-        "title": "优质服务",
-        "description": "以客户为中心，全程贴心服务"
-      }
-    ]
-  },
-  "stats": {
-    "title": "数据见证实力",
-    "items": [
-      { "value": 500, "label": "成功项目", "suffix": "+" },
-      { "value": 200, "label": "企业客户", "suffix": "+" },
-      { "value": 50, "label": "技术专家", "suffix": "+" },
-      { "value": 98, "label": "客户满意度", "suffix": "%" }
-    ]
-  },
-  "partners": {
-    "title": "合作伙伴"
-  },
-  "cases": {
-    "title": "成功案例",
-    "subtitle": "真实案例，卓越成果",
-    "items": [
-      {
-        "title": "金融行业解决方案",
-        "description": "为某大型银行提供数字化转型服务",
-        "tags": ["金融", "数字化转型"]
-      },
-      {
-        "title": "电商平台搭建",
-        "description": "打造日均百万级订单处理平台",
-        "tags": ["电商", "高并发"]
-      },
-      {
-        "title": "智能制造系统",
-        "description": "助力制造企业实现智能化升级",
-        "tags": ["智能制造", "IoT"]
-      }
-    ]
-  },
-  "cta": {
-    "title": "准备好开始了吗？",
-    "subtitle": "立即联系我们，获取专业咨询",
-    "button": "开始咨询"
-  },
   "about": {
-    "title": "关于未来科技",
-    "subtitle": "您的数字化转型伙伴",
-    "description": "未来科技是一家专注于IT服务的高新技术企业，致力于为客户提供全面的技术解决方案。我们拥有一支经验丰富的专业团队，在软件开发、云计算、大数据等领域具有深厚的技术积累。",
     "mission": "使命",
-    "missionText": "通过创新的技术解决方案，帮助企业实现数字化转型，创造更大价值。",
     "vision": "愿景",
-    "visionText": "成为最受客户信赖的IT服务提供商。",
-    "values": "核心价值观",
-    "valuesItems": [
-      { "title": "客户至上", "description": "始终以客户需求为导向" },
-      { "title": "创新驱动", "description": "持续创新，引领技术发展" },
-      { "title": "协作共赢", "description": "与客户、伙伴共同成长" },
-      { "title": "追求卓越", "description": "精益求精，打造精品" }
-    ],
-    "team": {
-      "title": "核心团队",
-      "subtitle": "专业、专注、专心"
-    }
+    "values": "核心价值观"
   },
   "contact": {
     "title": "联系我们",
@@ -145,18 +41,10 @@
     }
   },
   "footer": {
-    "description": "专业IT服务解决方案提供商，为企业数字化转型保驾护航",
+    "description": "专注金融行业IT服务，为企业数字化转型保驾护航",
     "quickLinks": "快速链接",
     "contact": "联系方式",
     "follow": "关注我们",
-    "copyright": "© 2024 未来科技. 保留所有权利。"
-  },
-  "servicePage": {
-    "servicesTitle": "服务内容",
-    "ourAdvantages": "我们的优势",
-    "readyToStart": "准备好开始了吗？",
-    "getConsultation": "立即联系我们，获取专业咨询",
-    "startConsultation": "开始咨询",
-    "allServices": "全部服务"
+    "copyright": "© 2024 FutureTech. 保留所有权利。"
   }
 }
