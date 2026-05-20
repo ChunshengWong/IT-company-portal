@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle, Globe, Smartphone, Cpu } from 'lucide-react';
+import { ArrowRight, CheckCircle, Globe, Smartphone, Cpu, Cloud } from 'lucide-react';
 
 export default function SoftwareDevelopmentPage() {
   const { t } = useTranslation();
