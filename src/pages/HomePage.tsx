@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import Hero from '../components/Hero';
 import CaseCard from '../components/CaseCard';
 import { Shield, Cloud, Building2, ArrowRight } from 'lucide-react';
 
@@ -79,8 +78,6 @@ export default function HomePage() {
 
   return (
     <div>
-      <Hero />
-
       <section className="py-16 lg:py-24 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-12">
