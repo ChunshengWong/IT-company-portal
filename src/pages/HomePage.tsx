@@ -105,14 +105,14 @@ export default function HomePage() {
     <div className="bg-gray-50">
       <section className="py-20 lg:py-28 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 mb-8 leading-tight">
               {t('hero.title')}
             </h1>
-            <p className="text-xl lg:text-2xl text-gray-600 mb-10 max-w-2xl font-light">
+            <p className="text-xl lg:text-2xl text-secondary mb-10 max-w-2xl mx-auto font-light">
               {t('hero.subtitle')}
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/about"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-primary to-primary-dark text-white font-semibold rounded-xl hover:shadow-xl hover:scale-105 transition-all duration-300"
