@@ -42,6 +42,12 @@ export default function HomePage() {
   const cases = t('cases.items', { returnObjects: true }) as CaseItem[];
 
   const icons = ['code', 'cloud', 'database', 'monitor'];
+  const links = [
+    '/services/software-development',
+    '/services/cloud-services',
+    '/services/data-services',
+    '/services/os-support',
+  ];
 
   const partnerLogos: PartnerLogo[] = [
     { name: 'Microsoft', color: 'bg-blue-500' },
@@ -73,6 +79,7 @@ export default function HomePage() {
                 title={service.title}
                 description={service.description}
                 icon={icons[index]}
+                linkTo={links[index]}
               />
             ))}
           </div>

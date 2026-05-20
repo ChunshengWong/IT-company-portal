@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 import ServiceCard from '../components/ServiceCard';
-import { Code, Cloud, Database, Monitor } from 'lucide-react';
+import { Code, Cloud, Database, Monitor, ArrowRight } from 'lucide-react';
 
 interface ServiceItem {
   title: string;
@@ -12,6 +13,7 @@ interface DetailedService {
   title: string;
   description: string;
   features: string[];
+  linkTo: string;
 }
 
 export default function ServicesPage() {
@@ -20,6 +22,12 @@ export default function ServicesPage() {
   const services = t('services.items', { returnObjects: true }) as ServiceItem[];
 
   const icons = ['code', 'cloud', 'database', 'monitor'];
+  const links = [
+    '/services/software-development',
+    '/services/cloud-services',
+    '/services/data-services',
+    '/services/os-support',
+  ];
 
   const detailedServices: DetailedService[] = [
     {
@@ -32,6 +40,7 @@ export default function ServicesPage() {
         '企业级系统',
         'API开发与集成',
       ],
+      linkTo: '/services/software-development',
     },
     {
       icon: Cloud,
@@ -43,6 +52,7 @@ export default function ServicesPage() {
         'DevOps自动化',
         '容器化部署',
       ],
+      linkTo: '/services/cloud-services',
     },
     {
       icon: Database,
@@ -54,6 +64,7 @@ export default function ServicesPage() {
         '实时数据分析',
         'BI报表系统',
       ],
+      linkTo: '/services/data-services',
     },
     {
       icon: Monitor,
@@ -65,6 +76,7 @@ export default function ServicesPage() {
         '性能优化',
         '安全加固',
       ],
+      linkTo: '/services/os-support',
     },
   ];
 
@@ -90,6 +102,7 @@ export default function ServicesPage() {
                 title={service.title}
                 description={service.description}
                 icon={icons[index]}
+                linkTo={links[index]}
               />
             ))}
           </div>
@@ -100,19 +113,21 @@ export default function ServicesPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="space-y-12">
             {detailedServices.map((service, index) => (
-              <div
+              <Link
                 key={index}
-                className={`bg-white rounded-2xl p-8 lg:p-12 shadow-sm ${
+                to={service.linkTo}
+                className={`block bg-white rounded-2xl p-8 lg:p-12 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 ${
                   index % 2 === 1 ? 'lg:flex-row-reverse' : ''
                 }`}
               >
                 <div className="lg:flex lg:items-center lg:gap-12">
                   <div className="lg:w-1/3 mb-6 lg:mb-0">
-                    <div className="w-20 h-20 rounded-2xl bg-secondary/10 flex items-center justify-center mb-4">
-                      <service.icon className="w-10 h-10 text-secondary" />
+                    <div className="w-20 h-20 rounded-2xl bg-secondary/10 flex items-center justify-center mb-4 group-hover:bg-secondary group-hover:text-white transition-all duration-300">
+                      <service.icon className="w-10 h-10 text-secondary group-hover:text-white" />
                     </div>
-                    <h3 className="text-2xl font-bold text-text-primary mb-2">
+                    <h3 className="text-2xl font-bold text-text-primary mb-2 group-hover:text-secondary transition-colors flex items-center gap-2">
                       {service.title}
+                      <ArrowRight className="w-5 h-5 opacity-0 group-hover:opacity-100 transition-opacity" />
                     </h3>
                     <p className="text-text-secondary">
                       {service.description}
@@ -135,7 +150,7 @@ export default function ServicesPage() {
                     </div>
                   </div>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>

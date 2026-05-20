@@ -150,5 +150,13 @@
     "contact": "Contact",
     "follow": "Follow Us",
     "copyright": "© 2024 FutureTech. All rights reserved."
+  },
+  "servicePage": {
+    "servicesTitle": "Services",
+    "ourAdvantages": "Our Advantages",
+    "readyToStart": "Ready to Get Started?",
+    "getConsultation": "Contact us now for professional consultation",
+    "startConsultation": "Start Consulting",
+    "allServices": "All Services"
   }
 }

@@ -2,13 +2,14 @@ import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import LanguageSwitcher from './LanguageSwitcher';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, ChevronDown } from 'lucide-react';
 
 export default function Header() {
   const { t } = useTranslation();
   const location = useLocation();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,14 +22,21 @@ export default function Header() {
 
   useEffect(() => {
     setIsMobileMenuOpen(false);
+    setIsServicesDropdownOpen(false);
   }, [location]);
 
   const navItems = [
     { path: '/', label: t('nav.home') },
     { path: '/about', label: t('nav.about') },
-    { path: '/services', label: t('nav.services') },
     { path: '/cases', label: t('nav.cases') },
     { path: '/contact', label: t('nav.contact') },
+  ];
+
+  const servicesItems = [
+    { path: '/services/software-development', label: t('services.items.0.title') },
+    { path: '/services/cloud-services', label: t('services.items.1.title') },
+    { path: '/services/data-services', label: t('services.items.2.title') },
+    { path: '/services/os-support', label: t('services.items.3.title') },
   ];
 
   return (
@@ -62,6 +70,46 @@ export default function Header() {
                 {item.label}
               </Link>
             ))}
+            
+            <div className="relative">
+              <button
+                onClick={() => setIsServicesDropdownOpen(!isServicesDropdownOpen)}
+                className={`flex items-center gap-1 text-sm font-medium transition-colors hover:text-secondary ${
+                  location.pathname.startsWith('/services')
+                    ? 'text-primary'
+                    : 'text-text-secondary'
+                }`}
+              >
+                {t('nav.services')}
+                <ChevronDown className={`w-4 h-4 transition-transform ${isServicesDropdownOpen ? 'rotate-180' : ''}`} />
+              </button>
+              
+              {isServicesDropdownOpen && (
+                <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-xl shadow-lg border border-gray-100 py-2">
+                  <Link
+                    to="/services"
+                    className="block px-4 py-2 text-sm text-text-secondary hover:text-primary hover:bg-gray-50 transition-colors"
+                  >
+                    全部服务
+                  </Link>
+                  <div className="my-1 border-t border-gray-100"></div>
+                  {servicesItems.map((item) => (
+                    <Link
+                      key={item.path}
+                      to={item.path}
+                      className={`block px-4 py-2 text-sm transition-colors hover:text-primary hover:bg-gray-50 ${
+                        location.pathname === item.path
+                          ? 'text-primary bg-blue-50'
+                          : 'text-text-secondary'
+                      }`}
+                    >
+                      {item.label}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
             <LanguageSwitcher />
           </div>
 
@@ -94,7 +142,39 @@ export default function Header() {
                   {item.label}
                 </Link>
               ))}
-              <div className="pt-2 border-t">
+
+              <div className="border-t pt-4">
+                <div className="text-base font-medium text-text-primary mb-3">
+                  {t('nav.services')}
+                </div>
+                <div className="flex flex-col gap-2 pl-2">
+                  <Link
+                    to="/services"
+                    className={`text-sm py-1 transition-colors ${
+                      location.pathname === '/services'
+                        ? 'text-primary'
+                        : 'text-text-secondary'
+                    }`}
+                  >
+                    全部服务
+                  </Link>
+                  {servicesItems.map((item) => (
+                    <Link
+                      key={item.path}
+                      to={item.path}
+                      className={`text-sm py-1 transition-colors ${
+                        location.pathname === item.path
+                          ? 'text-primary'
+                          : 'text-text-secondary'
+                      }`}
+                    >
+                      {item.label}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+
+              <div className="pt-4 border-t">
                 <LanguageSwitcher />
               </div>
             </div>

@@ -150,5 +150,13 @@
     "contact": "联系方式",
     "follow": "关注我们",
     "copyright": "© 2024 未来科技. 保留所有权利。"
+  },
+  "servicePage": {
+    "servicesTitle": "服务内容",
+    "ourAdvantages": "我们的优势",
+    "readyToStart": "准备好开始了吗？",
+    "getConsultation": "立即联系我们，获取专业咨询",
+    "startConsultation": "开始咨询",
+    "allServices": "全部服务"
   }
 }
